@@ -1,0 +1,17 @@
+@keyframes button-animation {
+  from {
+    background: linear-gradient(to right, #319E75 0%, #24B47E 0% 100%);
+  }
+  25% {
+    background: linear-gradient(to right, #319E75 25%, #24B47E 25% 100%);
+  }
+  50% {
+    background: linear-gradient(to right, #319E75 50%, #24B47E 50% 100%);
+  }
+  75% {
+    background: linear-gradient(to right, #319E75 75%, #24B47E 75% 100%);
+  }
+  to {
+    background: #319E75;
+  }
+}

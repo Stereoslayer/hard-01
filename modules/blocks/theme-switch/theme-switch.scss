@@ -1,0 +1,47 @@
+.theme-switch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+
+  &__lightside {
+    background-image: url("../../../image/lightside_light.svg");
+    width: 28px;
+    height: 28px;
+  }
+
+  &__button {
+    width: 44px;
+    height: 24px;
+    background: #FFF;
+    border-radius: 9999px;
+  }
+
+  &__button-point {
+    background: #24B47E url("../../../image/button-point.svg");
+    border-radius: 9999px;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    transform: translate(-10px);
+    transition: transform 0.2s ease;
+
+    &:checked {
+      transform: translate(10px);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &__darkside {
+    background-image: url("../../../image/darkside_light.svg");
+    width: 19.35px;
+    height: 19.35px;
+  }
+}
+
+.radio-button:checked + .theme-switch__button {
+  .theme-switch__button-point {
+    transform: translate(10px);
+    transition: transform 0.2s ease;
+  }
+}

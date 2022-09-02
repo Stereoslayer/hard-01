@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road Club</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+<header class="header">
+  <nav>
+    <ul class="header__menu">
+      <li class="header__nav-title"><a class="header__nav-link" href="#road-type">Покрытия и градиенты</a></li>
+      <li class="header__nav-title"><a class="header__nav-link" href="#bikes">Велосипеды</a></li>
+      <li class="header__nav-title"><a class="header__nav-link" href="#training">Тренировки</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="content">
+  <section class="info">
+    <div class="info__text-column">
+      <h1 class="info__title">Шоссе, ТТ и Грэвел</h1>
+      <p class="info__paragraph">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам –
+        нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+      <button class="info__button" type="button">Подробнее</button>
+      <div class="info__bike-title">
+        <p class="info__bike-name">Cannondale Systemsix</p>
+        <span class="info__line"></span>
+      </div>
+    </div>
+    <img class="info__image" src="./image/info-pic.png" alt="Гравийная дорога в лесу">
+    <div class="info__bike-box">
+      <div class="info__bike-fix">
+        <img class="info__sticky-image" src="./image/cannondale_systemsix.png" alt="Велосипед">
+      </div>
+    </div>
+  </section>
+  <section class="quote">
+    <img class="quote__image" src="./image/quote-pic.png" alt="Асфальтовая дорога в горах">
+    <blockquote class="quote__text-box">
+      <p class="quote__paragraph">
+        «Катайся много или мало, долго или коротко, как хочешь - но катайся»</p>
+      <footer class="quote__footer">
+        <p class="quote__author">Эдди Меркс</p>
+        <p class="quote__author-career">Велогонщик</p>
+      </footer>
+    </blockquote>
+  </section>
+  <section class="road-type" id="road-type">
+    <div class="road-type__text"></div>
+    <div class='road-type__cards'></div>
+    <div class="road-type__pictogram-back"></div>
+    <fieldset class="road-type__buttons">
+      <button class="road-type__button" type="button" id="left-button"></button>
+      <button class="road-type__button road-type__button_right-direction" type="button" id="right-button"></button>
+    </fieldset>
+  </section>
+  <section class="bikes" id="bikes">
+    <div class="bikes__head">
+      <h2 class="bikes__title">Велосипеды</h2>
+      <fieldset class="bikes__fieldset">
+        <label>
+          <input class="radio-button" type="radio" name="road-type" id="road" checked="checked">
+          <span class="radio-button_visible bikes__button">
+          <span class="bikes__button-title">Шоссе</span></span>
+        </label>
+        <label>
+          <input class="radio-button" type="radio" name="road-type" id="gravel">
+          <span class="radio-button_visible bikes__button">
+          <span class="bikes__button-title">Грэвел</span></span>
+        </label>
+        <label>
+          <input class="radio-button" type="radio" name="road-type" id="TT">
+          <span class="radio-button_visible bikes__button">
+          <span class="bikes__button-title">TT</span></span>
+        </label>
+      </fieldset>
+    </div>
+    <div class="bikes__cards"></div>
+  </section>
+  <section class="training" id="training">
+    <div class="training__text-column">
+      <h2 class="training__title">Тренировки</h2>
+      <p class="training__paragraph">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а
+        записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный
+        план.</p>
+      <div class="training__links">
+        <a href="https://www.strava.com" class="training__link">Strava</a>
+        <a href="https://www.komoot.com" class="training__link">Komoot</a>
+      </div>
+    </div>
+    <img class="training__image" src="./image/training.png" alt="Асфальтовая дорога между деревьев">
+  </section>
+</main>
+<footer class="footer">
+  <div class="footer__form-column">
+    <h3 class="footer__title">Подпишитесь на рассылку —</h3>
+    <form class="footer__form">
+      <input class="footer__email-form" type="email" placeholder="Ваш e-mail">
+      <button class="footer__submit-button" type="button">ok</button>
+    </form>
+    <p class="footer__copyright">© Road Club 2021</p>
+  </div>
+  <div class="theme-switch footer__theme-switch">
+    <span class="theme-switch__lightside"></span>
+    <label>
+      <input class="radio-button" type="checkbox" name="theme-switch" id="theme-switch">
+      <span class="radio-button_visible theme-switch__button"><span class="theme-switch__button-point"></span></span>
+    </label>
+    <span class="theme-switch__darkside"></span>
+  </div>
+</footer>
+<template id="bike-template-cards">
+  <a class="bikes__card">
+    <img class="bikes__image" alt="Велосипед">
+    <p class="bikes__image-title"></p>
+  </a>
+</template>
+<template id='road-type-cards'>
+  <div class='road-type__card'>
+    <img class='road-type__image'>
+  </div>
+</template>
+<template id='road-type-pictogram'>
+  <img class='road-type__pictogram'>
+</template>
+<template id="road-type-text">
+  <div id="text">
+    <h2 class="road-type__title"></h2>
+    <p class="road-type__paragraph"></p>
+  </div>
+</template>
+<script src="scripts/index.js"></script>
+</body>
+</html>
